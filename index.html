@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Site</title>
+</head>
+<body>
+    <nav class="left" aria-label="Main Navigation">
+        <ul>
+            <li><a href="#home" onclick="scrollToSection(event, 'home')">home.</a></li>
+            <li><a href="#about" onclick="scrollToSection(event, 'about')">about.</a></li>
+            <li><a href="#contact" onclick="scrollToSection(event, 'contact')">contact.</a></li>
+            <li><a href="#debug" onclick="scrollToSection(event, 'debug')">debug.</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div>
+            <h1 class="initial_text">Hello</h1>
+            <p class="second_text" title="that's called sarcasm">bottom text.</p>
+        </div>
+        <div class="footer-text">© 69420 <a style="text-decoration: none; color: #DDBAFF" href="https://github.com/MatheusMotizuki">gh.com/MatheusMotizuki</a>. All Rights Reserved. (not really) </div>
+    </section>
+
+    <section id="about">
+        <div class="about-container" style="font-family: Arial, sans-serif; padding: 20px;">
+            <h1 style="text-align: center;">About Me</h1>
+            <p>I’m a C/C++, Game developer and web developer, some times, I enjoy creating both system applications and interactive websites.</p>
+            
+            <p><strong>Languages I work with:</strong> C/C++/C#, Lua, HTML & CSS, JavaScript</p>
+        
+            <p><strong>Frameworks:</strong></p>
+            <ul>
+                <li>raylib, imgui (C/C++)</li>
+                <li>Svelte, Three.js (Web)</li>
+            </ul>
+        
+            <p><strong>Game Engines:</strong> Unreal Engine, Unity, Godot</p>
+            
+            <p><strong>Other Tools:</strong> Blender (3D modeling), GIMP (Image editing), Audacity (Audio editor)</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-icons">
+            <div class="icon-wrapper">
+                <svg onclick="handle_in()" class="in-ico" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60" height="60" viewBox="0 0 50 50">
+                    <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
+                </svg>
+            </div>
+        
+            <div class="icon-wrapper">
+                <svg onclick="handle_gm()" class="gm-ico" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60" height="60" viewBox="0 0 50 50">
+                    <path d="M 5.5 7 C 3.019531 7 1 9.019531 1 11.5 L 1 11.925781 L 25 29 L 49 11.925781 L 49 11.5 C 49 9.019531 46.980469 7 44.5 7 Z M 6.351563 9 L 43.644531 9 L 25 22 Z M 1 14.027344 L 1 38.5 C 1 40.980469 3.019531 43 5.5 43 L 44.5 43 C 46.980469 43 49 40.980469 49 38.5 L 49 14.027344 L 43 18.296875 L 43 41 L 7 41 L 7 18.296875 Z"></path>
+                </svg>
+            </div>
+            
+            <div class="icon-wrapper">
+                <svg onclick="handle_gh()" class="gh-ico" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60" height="60" viewBox="0 0 30 30">
+                    <path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"></path>
+                </svg>
+            </div>
+
+            <p>or, just leave a like :)</p>
+            <div class="btn-like">
+            <div class="btn-like">
+                <button class="likeBtn">
+                    Like (<span class="totalLikes">0</span>)
+                </button>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <section id="debug">
+        <h1>I wonder what he'll add here...</h1>
+    </section>
+
+    <script>
+
+        function scrollToSection(event, sectionId) {
+            // Prevent the default link behavior (which causes the URL to update)
+            event.preventDefault();
+
+            // Find the section to scroll to
+            const targetSection = document.getElementById(sectionId);
+
+            // Scroll to the section
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+
+
+        function scrollToSection(event, sectionId) {
+            // Prevent the default link behavior (which causes the URL to update)
+            event.preventDefault();
+
+            // Find the section to scroll to
+            const targetSection = document.getElementById(sectionId);
+
+            // Scroll to the section
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+
+        let likes = 0;
+
+        window.onload = function () {
+            document.body.style.opacity = 1;
+        };
+
+        document.addEventListener('DOMContentLoaded', function(event) {
+            document.querySelector('body').style.opacity = 1
+        })
+
+        $(document).ready(function () {
+        if (localStorage.getItem("liked") === "true") {
+            $(".likeBtn").prop("disabled", true);
+            likes = parseInt(localStorage.getItem("likesCount")) || 0;
+            setLikes(likes);
+        } else {
+            setLikes(likes);
+        }
+        });
+
+        $("body").on("click", ".likeBtn", function () {
+        if (localStorage.getItem("liked") !== "true") {
+            likes++;
+            setLikes(likes);
+
+            localStorage.setItem("likesCount", likes);
+            localStorage.setItem("liked", "true");
+
+            $(".likeBtn").prop("disabled", true);
+        }
+        });
+
+        function setLikes(count) {
+            $(".totalLikes").text(count);
+        }
+
+        const handle_gm = () => {
+            window.open('mailto:matheusmotizuki@gmail.com?subject=Contact&body=Your very cool message in here.');
+        }
+
+        const handle_in = () => {
+            window.open("https://www.linkedin.com/in/matheus-motizuki/");
+        }
+
+        const handle_gh = () => {
+            window.open("https://github.com/MatheusMotizuki");
+        }
+
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        function updateActiveLink() {
+            let currentSection = "";
+
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= sectionTop - section.clientHeight / 3) {
+                    currentSection = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach((link) => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            observer.unobserve(entry.target);
+            }
+        });
+        });
+
+        const button = document.querySelector(".likeBtn");
+        const initial_txt = document.querySelector(".initial_text");
+        const second_txt = document.querySelector(".second_text");
+
+        observer.observe(button);
+        observer.observe(initial_txt);
+        observer.observe(second_txt);
+        
+        window.addEventListener('scroll', updateActiveLink);
+
+        window.addEventListener('load', updateActiveLink);
+    </script>
+
+<style>
+    .contact-icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-like{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon-wrapper {
+        width: 60px;
+        height: 60px;
+        transition: transform 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .likeBtn {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .initial_text{
+        opacity: 0;
+        transform: translateX(-80px);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .second_text{
+        opacity: 0;
+        transform: translateX(80px);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .icon-wrapper:hover {
+        transform: scale(1.2);
+    }
+
+    .in-ico:hover path {
+        fill: #0288D1;
+    }
+
+    .gm-ico:hover path {
+        fill: #E84F4B;
+    }
+
+    .gh-ico:hover path {
+        fill: #DDBAFF;
+    }
+
+    html, body {
+        scroll-behavior: smooth;
+        height: 100%;
+        margin: 0;
+    }
+
+    body {
+        opacity: 0;
+        transition: opacity 1s;
+
+        background-color: #141414;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        overflow-x: hidden;
+
+        font-family: "IBM Plex Mono", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    nav.left {
+        width: 15%;
+        height: 35%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        color: white;
+        z-index: 100;
+        align-items: flex-start;
+    }
+
+    nav.left:hover ul{
+        background-color: #0004ff;
+        padding-left: 20px;
+    }
+
+    nav.left ul {
+        width: 175px;
+        transition: all 0.4s ease;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav.left li {
+        margin: 10px 0;
+    }
+
+    nav.left a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        transition: color 0.3s, font-size 0.1s ease-in, margin-left 0.3s;
+    }
+
+    nav a.active {
+        color: rgb(255, 187, 0);
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-left: 10px;
+    }
+
+    nav.left a:hover {
+        color: rgb(0, 0, 0);
+        font-weight: 600;
+        margin-left: 10px;
+    }
+
+    section {
+        height: 100vh;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background-color: #141414;
+    }
+
+    #home {
+        background-color: #2c2c2c;
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .footer-text {
+        position: absolute;
+        bottom: 10px;
+        font-size: 0.8rem;
+        color: #B0B0B0;
+        opacity: 0;
+        animation: fadeInUp 0.5s ease-out 1s forwards;
+    }
+
+    #about {
+        background-color: #1c1c1c;
+        color: white;
+        padding: 40px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    #about .about-container {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        line-height: 1.5;
+    }
+
+    #about h1 {
+        text-align: center;
+        color: #0004ff;
+    }
+
+    #about ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    #about strong {
+        font-weight: bold;
+    }
+
+    #contact{
+        background-color: #2c2c2c;
+    }
+
+    #debug {
+        background-color: #1c1c1c;
+    }
+</style>
+
+</body>
+</html>
